@@ -4,72 +4,51 @@
 
 <!-- Formspree -->
 
-<div class="container">
-  <% form_tag 'https://formspree.io/brussels@lewagon.org', class:"submission" do %>
-  <div class="row">
-    <h2>
-      Registration
-    </h2>
-  </div>
-  <div class="row">
-    <div class="col-xs-12 col-lg-2">
-    </div>
-    <div class="col-xs-12 col-lg-4 form-col">
-      <div class="form-item">
-        <div class="label-group">
-          <i class="fa fa-user"></i> <%= label_tag :first_name %>
-        </div>
-        <%= text_field_tag :first_name, placeholder:"Alan" %>
-      </div>
-      <div class="form-item">
-        <div class="label-group">
-          <i class="fa fa-font"></i> <%= label_tag :last_name %>
-        </div>
-        <%= text_field_tag :last_name, placeholder:"Turing" %>
-      </div>
-<!--       <div class="form-item">
-        <div class="label-group">
-        <i class="fa fa-calendar"></i>
-          <%= label_tag :age %>
-        </div>
-        <%= number_field_tag :age, placeholder:"42" %>
-      </div> -->
-<!--       <div class="form-item">
-        <div class="label-group">
-          <i class="fa fa-mobile"></i> <%= label_tag :phone_number %>
-        </div>
-        <%= phone_field_tag :phone_number, placeholder:"+32 485 77 88 99" %>
-      </div> -->
-      <div class="form-item">
-        <div class="label-group">
-          <i class="fa fa-envelope"></i> <%= label_tag :email %>
-        </div>
-        <%= text_field_tag :email, placeholder:"alan@turing.com" %>
+<div class="container submission">
+  <h2 >
+    Registration
+  </h2>
+  <% form_tag 'https://formspree.io/brussels@lewagon.org', class:"form-horizontal sm-col col-md-8 col-md-offset-2" do %>
+    <div class="form-group">
+      <%= label_tag 'First Name', class: 'col-sm-2 control-label' %>
+      <div class="col-sm-10">
+        <%= text_field_tag :first_name, placeholder:"Alan", class: 'form-control' %>
       </div>
     </div>
-    <div class="col-xs-12 col-lg-4 form-col">
-      <div class="form-item">
-        <div class="label-group">
-          <i class="fa fa-comments"></i> <%= label_tag :referer %>
-        </div>
-        <%= text_area_tag :referer, placeholder: "Where did you hear about this course? Twitter, Facebook, a friend (who?), etc." %>
-      </div>
-      <div class="form-item">
-        <div class="label-group">
-          <i class="fa fa-thumbs-o-up"></i> <%= label_tag :motivation %>
-        </div>
-        <%= text_area_tag :motivation, placeholder: "Why do you want to attend this course? What is your project?" %>
+    <div class="form-group">
+      <%= label_tag 'Last Name', class: 'col-sm-2 control-label' %>
+      <div class="col-sm-10">
+        <%= text_field_tag :last_name, placeholder:"Poe", class: 'form-control' %>
       </div>
     </div>
-    <div class="col-xs-12 col-lg-2">
-    </div>
-  </div>
-  <div class="row">
-    <div class="form-item">
-      <div class="submit">
-        <%= submit_tag :submit, value:"Apply now!", class:"btn-submit apply-btn" %>
+    <div class="form-group">
+      <%= label_tag 'Email', class: 'col-sm-2 control-label' %>
+      <div class="col-sm-10">
+        <%= text_field_tag :email, placeholder:"alan@poe.com", class: 'form-control' %>
       </div>
     </div>
-  </div>
-  <% end %>
+    <div class="form-group">
+      <%= label_tag 'Referer', class: 'col-sm-2 control-label' %>
+      <div class="col-sm-10">
+        <%= text_area_tag :referer, placeholder: "Where did you hear about this course? Twitter, Facebook, a friend (who?), etc.", class: 'form-control' %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= label_tag 'Referer', class: 'col-sm-2 control-label' %>
+      <div class="col-sm-10">
+        <%= text_area_tag :referer, placeholder: "Where did you hear about this course? Twitter, Facebook, a friend (who?), etc.", class: 'form-control' %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= label_tag 'Motivation', class: 'col-sm-2 control-label' %>
+      <div class="col-sm-10">
+        <%= text_area_tag :motivation, placeholder: "Why do you want to attend this course? What is your project?", class: 'form-control' %>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <%= submit_tag :submit, value:"Apply now!", class:"btn btn-primary" %>
+      </div>
+    </div>
+    <% end %>
 </div>
