@@ -40,7 +40,7 @@ p {
 
   h1 {
     font-weight: 700;
-    font-size: 68px;
+    font-size: 48px;
     margin-bottom: 40px;
     margin-top: 30px;
     color: white;
@@ -113,5 +113,11 @@ p {
   .copyright {
     padding-top: 130px;
     font-size: 10pt;
+  }
+}
+
+@media (max-width: $screen-sm-min) {
+  .sm-left {
+    text-align: left;
   }
 }
